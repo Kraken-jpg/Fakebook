@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="search-bar">
+            <i class="first fab fa-facebook"></i>
+            <input type="text" placeholder="&#xF002; Search Facebook" style="font-family:Arial, FontAwesome" class="serqBar"/>
+        </div>
+        <div class="btns">
+            <button class="home btn active">
+                <i class="fas fa-home"></i>
+            </button>
+            <button class="friends btn">
+                <i class="fas fa-user-friends"></i>
+            </button>
+            <button class="Watch btn">
+                <i class="fas fa-tv"></i>
+            </button>
+            <button class="friends btn">
+                <i class="fas fa-users"></i>
+            </button>
+            <button class="friends btn">
+                <i class="fas fa-gamepad"></i>
+            </button>
+        </div>
+        <div class="Extreme_Right">
+            <a class="profile">
+                <img src="images/une.jpg" alt="" class="Bukuroshi">
+                <p>Arti</p>
+            </a>
+            <button class="create">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="create">
+                <i class="fab fa-facebook-messenger"></i>
+            </button>
+            <button class="create">
+                <i class="fas fa-bell"></i>
+            </button>
+            <button class="create" >
+                <div class="settings">
+                    <i class=" fas fa-caret-down"></i>
+                </div>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <section class="shortcuts-categories">
+            <div class="left-bar">
+                <div class="categories">
+                    <a class="cate_btn">
+                        <img src="images/une.jpg" alt="" class="Bukuroshi">
+                        <p>Selimi Arti</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="fas fa-info-circle stili"></i>
+                        <p>COVID-19 Informacion Centre</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="fas fa-user-friends stili"></i>
+                        <p>Friends</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="fas fa-play stili"></i>
+                        <p>Videos</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="fas fa-users stili"></i>
+                        <p>Groups</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="far fa-calendar-alt stili"></i>
+                        <p>Events</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="far fa-clock stili"></i>
+                        <p>Memories</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="far fa-bookmark stili"></i>
+                        <p>Saved</p>
+                    </a>
+                    <a class="cate_btn">
+                        <i class="fas fa-flag stili"></i>
+                        <p>Pages</p>
+                    </a>
+                    <a class="cate_btn add" onclick="addCategories()">
+                        <div class="down"><i class="for fas fa-chevron-down"></i></div>
+                        <p>See more</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-tags stili"></i>
+                        <p>Buy and sell groups</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-exclamation-circle stili"></i>
+                        <p>Crisis response</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="far fa-list-alt stili"></i>
+                        <p>Friend lists</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fab fa-gratipay stili"></i>
+                        <p>Fundraisers</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-dice-six stili"></i>
+                        <p>Games</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-gamepad stili"></i>
+                        <p>Gaming video</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-briefcase stili"></i>
+                        <p>Jobs</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-video stili"></i>
+                        <p>Live videos</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fab fa-facebook-messenger stili"></i>
+                        <p>Messenger</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="far fa-calendar-alt stili"></i>
+                        <p>Most recent</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-hand-holding stili"></i>
+                        <p>Offers</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-ad stili"></i>
+                        <p>Recent Ad activity</p>
+                    </a>
+                    <a class="cate_btn none appear">
+                        <i class="fas fa-smog stili"></i>
+                        <p>Weather</p>
+                    </a>
+                    <a class="cate_btn none appear" onclick="removeCategories()">
+                        <div class="up"><i class="for fas fa-chevron-up"></i></div>
+                        <p>See less</p>
+                    </a>
+                </div>
+                <div class="shortcuts" onmouseover="editButtonThing()" onmouseout="editRemoveThing()">
+                    <div class="first-sc">
+                        <a class="shortcut-header">Shortcuts</a>
+                        <button href="" class="cate_btn edit none trigger" >Edit</button>
+                    </div>
+                    <a class="actual-shortcuts cate_btn">
+                        <img class="best-gejm" src="images/download.jpg" alt="">
+                        <p>Ninja Saga</p>
+                    </a>
+                </div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close-button">&times;</span>
+                            <h1>Edit Shortcuts</h1>
+                            <p>
+                            Shortcuts are quick links to some of your Pages, groups and games. Shortcuts are selected automatically by default,
+                             but you can pin something to your shortcuts so that it's always shown at the top, or hide it from the list.
+                            </p>
+                            <input type="text" placeholder="&#xF002; Search Groups" style="font-family:Arial, FontAwesome">
+                        </div>
+                        <div class="modal-shortcuts">
+                            <ul>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                                <li><p class="shortcut-groups">Kur'ani libri i shenjet i allahut gjeleshanuhu </p><a href="" class="sorting"><i class="fas fa-star"></i>Sorted Automatically<i class="fas fa-caret-down"></i></a> </li>
+                            </ul>
+                        </div>
+                        <div class="modal-btns">
+                            <button class="cancel-btn">Cancel</button>
+                            <button class="save-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="overlay"></div>
+        </section>
+        <section class="scrolling">
+            <div class="dostay">
+                <a class="stories">
+                    <div class="imejgji">
+                    </div>
+                    <div class="informatat">
+                        <i class="fas fa-plus-circle"></i>
+                        <p>Create a story</p>
+                    </div>
+                </a>
+                <a class="stories">
+                    <div class="dikush-tjeter">
+                        <p class="emri">Selimi Arti</p>
+                    </div>
+                </a>
+                <a class="stories">
+                    <div class="dikush-tjeter">
+                        <p class="emri">Selimi Arti</p>
+                    </div>
+                </a>
+                <a class="stories">
+                    <div class="dikush-tjeter">
+                        <p class="emri">Selimi Arti</p>
+                    </div>
+                </a>
+                <a class="stories">
+                    <div class="dikush-tjeter">
+                        <p class="emri">Selimi Arti</p>
+                    </div>
+                </a>              
+            </div>
+            <div class="status">
+                <div class="give-status">
+                    <img src="images/une.jpg" alt="" class="status-pro">
+                    <a class="trigger1">What's on your mind, Arti?</a>
+                </div>
+                <div class="adding-to-status">
+                    <a href="" class="Live Video"><i class="fas fa-video" style="padding-right: 5px;"></i>Live Video</a>
+                    <a href="" class="photo/video"><i class="fas fa-photo-video" style="padding-right: 5px;"></i>Photo/Video</a>
+                    <a href="" class="feelings"><i class="far fa-smile-beam" style="padding-right: 5px;"></i>Feelings</a>
+                </div>
+            </div>
+            <div class="modal1">
+                <div class="modal1-content">
+                    <div class="status-header">
+                        <div class="createPost">
+                            <h1>Create Post</h1>
+                        </div>
+                        <div class="closeStatus">
+                            <span class="close1-button">&times;</span>
+                        </div>
+                    </div>
+                    <div class="status-writer">
+                        <img src="images/une.jpg" alt="">
+                        <div>
+                            <p>Selimi Arti</p>
+                            <a href="" class="writing-To"><i class="fas fa-star"></i>Close friends<i class="fas fa-sort-down"></i></a>
+                        </div>
+                    </div>
+                    <div class="writingStatus">
+                        <span class="textarea " role="textbox" contenteditable oninput="enablePostBtn()">
+                    </div>
+                    <div class="adding-to-post">
+                        <div class="colors-emoticons">
+                            <p>Aa</p>
+                            <i class="far fa-laugh-squint"></i>
+                        </div>
+                        <div class="post-adding">
+                            <a role="button" class="trigger2">Add to your post</a>
+                            <div class="post-adding-icons">
+                                <i class="fas fa-video"></i>
+                                <i class="fas fa-photo-video"></i>
+                                <i class="fas fa-user-tag"></i>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="far fa-laugh-squint"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                        <a href="" class="Post-status">Post</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal2">
+                <div class="modal2-content">
+                    <div class="modal2-header">
+                        <span class="close2-button"><i class="fas fa-arrow-left"></i></span>
+                        <h2>Add to your post</h2>
+                    </div>
+                    <div class="modal2-footer">
+                        <div class="first4Options">
+                            <a href=""><i class="fas fa-video"></i> Add a Video</a>
+                            <a href=""><i class="fas fa-user-tag"></i> Tag a Friend</a>
+                            <a href=""><i class="far fa-laugh-squint"></i>Feeling/Activity</a>
+                            <a href=""><i class="fas fa-podcast"></i> Live Video</a>
+                        </div>
+                        <div class="second4Options">
+                            <a href=""><i class="fas fa-photo-video"></i> Photo/Video</a>
+                            <a href=""><i class="fas fa-map-marker-alt"></i> Check In</a>
+                            <a href=""><i class="fas fa-file"></i> GIF</a>
+                            <a href=""><i class="fas fa-glass-cheers"></i> Watch Party</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            <div class="rooms">
+                <div class="rooms-header">
+                    <p><i class="fas fa-video" style="padding-right: 5px;"></i> Rooms</p>
+                    <a href="">Create</a>
+                </div>
+                <div class="roomies">
+                    <div id="first-image">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <img src="images/une.jpg" alt="">
+                    <img src="images/une.jpg" alt="">
+                    <img src="images/une.jpg" alt="">
+                    <img src="images/une.jpg" alt="">
+                    <img src="images/une.jpg" alt="">
+                </div>
+            </div>
+            <div class="posts-section">
+                <div class="posts">
+                    <div class="post-header">
+                        <div class="poster">
+                            <img src="images/une.jpg" alt="">
+                            <div>
+                                <a href="">Selimi Arti</a>
+                                <a href="">1 d</a>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="post-content">
+                        <img src="images/aaf.png" alt="">
+                    </div>
+                    <div class="post-footer">
+                        <div class="post-info">
+                            <div class="emotions">
+                                <i class="far fa-thumbs-up"></i>
+                                <i class="far fa-laugh-squint"></i>
+                                <p>0</p>
+                            </div>
+                            <div class="comments-shares">
+                                <p>0 comments</p>
+                                <p>0 shares</p>
+                            </div>
+                        </div>
+                        <div class="likes-end-shit">
+                            <a href="" class="LCSH-btn"><i class="far fa-thumbs-up"></i>Like</a>
+                            <a href="" class="LCSH-btn"><i class="far fa-comment-alt"></i>Comment</a>
+                            <a href="" class="LCSH-btn"><i class="fas fa-share"></i>Share</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="friends-list">
+            <div class="sponsors">
+                <p>Sponsored</p>
+            </div>
+            <div class="contacts">
+                <div class="contact-header">
+                    <p>Contacts</p>
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-ellipsis-h optionsF"></i>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <a href="" class="cate_btn">
+                        <img src="images/une.jpg" alt="">
+                        Altin Selimi
+                    </a>
+                    <div class="groups-section">
+                        <p>Group converastions</p>
+                        <div class="new-group">
+                           <a class="cate_btn"> <i class="fas fa-plus"></i> Create New Group</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
